@@ -19,9 +19,9 @@ perso=pg.image.load("assets/main3.png")
 imagRect=perso.get_rect()
 #perso=pg.transform.rotozoom(perso,20,1)
 fpsClock = pg.time.Clock()
-font = pg.font.Font('../consolas.ttf', 30) #police//roxane
+font = pg.font.SysFont('consolas', 30) #police//roxane
 b = True
-moon=pg.image.load("assets/moon.png")
+
 LIMIYE=45
 son=pg.mixer.Sound("assets/shwish.mp3")
 yeah=pg.mixer.Sound("assets/pinwheel.mp3")
@@ -164,7 +164,7 @@ try:
         s = pg.Surface((WIND*3/2, WIND))  
         s.fill((0, 0, 0))
         f.blit(s, (0, 0))
-        f.blit(moon,(WIND/2,0))
+
         if boom:
             if boom>100:
                 boom=0
